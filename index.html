@@ -17,10 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--Noto Serif JP-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
-    <!--BIZ UDPGothic-->
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
-    <!--Mochiy Pop One-->
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <script type="text/javascript">
         function switchByWidth(){
             if (window.matchMedia('(max-width: 767px)').matches) {
@@ -33,12 +29,14 @@
         window.onload = switchByWidth;
         window.onresize = switchByWidth;
     </script>
-    <script type="text/javascript">
-        $(function(){
-            $("#sample-0-gototopbutton").click(function(){
-                scrollTo(0,0);
-            });
-        });
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85FVHZ075K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-85FVHZ075K');
     </script>
 
     <style>
@@ -46,36 +44,32 @@
             scroll-behavior: smooth;
             font-family: 'Noto Serif JP', serif;
         }
+        nav{
+
+        }
         body{
             padding: calc(2vh + 50px) 2vh 2vh;
             background-color:green;
         }
         .body2{
-            padding: 3vh 2vw;
+            padding: 2vh 2vw;
             background-color: white;
         }
         .face{
             text-align: center;
             font-size: 8vw;
             font-weight: 900;
-            height: calc(96vh - 50px);
+            height: calc(92vh - 50px);
             display: flex;
             justify-content: center;
             align-items: center;
-            }
-        .face .backgroundimage{
-            object-fit: cover;
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            height: 100vh;
+        }
+        .line{
+            height: 2vh;
+            background-color: green;
         }
         .face div{
             vertical-align: middle;
-        }
-        #ichiran{
-            font-size: 50px;
-            font-weight: 800;
         }
         .grade{
             font-size: 50px;
@@ -114,6 +108,10 @@
         }
         img{
             width: 100%;
+        }
+        .nav img{
+            height: 20px;
+            width: relative;
         }
         .bun {
 
@@ -193,12 +191,18 @@
                 text-align: right;
             }
         }
-        #gototopbutton{
-            transition: all 0.5s;
-            opacity: 0;
-        }
-        #gototopbutton.visible{
-            opacity: 1;
+        #sample-0-gototopbutton{
+            position: fixed;
+            bottom: 5vh;
+            right: 3vw;
+            margin: auto;
+            width: 4vw;
+            color: white;
+            padding: 7px 15px;
+            background: rgba(15, 15, 15, 0.8);
+            box-shadow: 0 0 5px 0 #5d5d5d;
+            border-radius: 0.5vw;
+            cursor: pointer;
         }
 
     </style>
@@ -253,7 +257,7 @@
                       </ul>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/playlist?list=PLd0bubgTjmNe3UEMMnflFQ_PoRNSf6O5r" target="_blank" rel="noopener" style="padding: 0;"><img src="assets/yt.svg" style="height:50px;"></a>
+                        <a style="padding: 0;" href="https://www.youtube.com/playlist?list=PLd0bubgTjmNe3UEMMnflFQ_PoRNSf6O5r" target="_blank" rel="noopener"><img style="height: 50px;" src="assets/yt.svg"></a>
                     </li>
                 </ul>
             </div>
@@ -263,14 +267,25 @@
 
     <div class="body2">
 
+
         <!--表紙-->
         <section class="face">
             <div>高校生徒会役員選挙2022</div>
         </section>
+    </div>
 
+
+
+    <div class="line"></div>
+
+    <div class="body2">
+
+    <div id="sample-0-gototopbutton">
+        <a href="#top"><img src="assets/arrow.png"></a>
+    </div>
         <!--News-->
         <section class="pad">
-            <h1>News</h1>
+            <h1 style="font-weight: 600;">News</h1>
             <div class="box">
                 <p>
                     2022.05.13
@@ -287,7 +302,7 @@
         <div class="space" id="#top"></div>
 
         <div class="row sort">
-            <h1 id="ichiran">立候補者一覧</h1>
+            <h1 id="ichiran" style="font-size: 50px; font-weight: 800;">立候補者一覧</h1>
             <p style="font-size: 30px;">(敬省略)</p>
         </div>
 
@@ -607,6 +622,7 @@
                     </div>
                 </div>
             </section>
+
         </div>
         <footer>
             <div class="pad">
