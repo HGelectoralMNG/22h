@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>seitokai2022hp</title>
+    <title>snkyo2022hg</title>
+    <link rel="icon" href="assets/icon.png">
 
     <!-- Bootstrap -->
     <link
@@ -51,6 +52,24 @@
             padding: calc(2vh + 50px) 2vh 2vh;
             background-color:green;
         }
+        #ichiran{
+            padding-left: 10px;
+            font-size: 50px;
+            display: flex;
+            align-items: baseline;
+            flex-direction: row;
+        }
+        @media screen and (max-width :467px){
+            #ichiran{
+                flex-direction: column;
+                font-size: 40px;
+            }
+        }
+        @media screen and (max-width :364px){
+            #ichiran{
+                font-size: 30px;
+            }
+        }
         .body2{
             padding: 2vh 2vw;
             background-color: white;
@@ -80,6 +99,11 @@
             font-size: 50px;
             font-weight: 550;
         }
+        @media screen and (max-width:517px){
+            .role{
+                font-size: 9vw;
+            }
+        }
         .howmany{
             font-size: 30px;
         }
@@ -97,6 +121,33 @@
             align-items: baseline;
             flex-direction: row;
         }
+        .sort2{
+            display: flex;
+            flex-direction: column;
+        }
+        .item1{
+            order: 1;
+        }
+        .item2{
+            order: 2;
+        }
+        .item3{
+            order: 3;
+        }
+        .item4{
+            order: 4;
+        }
+        @media screen and (max-width:767px){
+            .item1{
+                order: 2;
+            }
+            .item2{
+                order: 3;
+            }
+            .item3{
+                order: 1;
+            }
+        }
         @media screen and (max-width: 893px){
             .sort{
                 flex-direction: column;
@@ -106,7 +157,7 @@
             width: 336px;
             height: 189px;
         }
-        img{
+        .pad img{
             width: 100%;
         }
         .nav img{
@@ -129,10 +180,20 @@
         .box li{
             font-size: 20px;
         }
+        @media screen and (max-width: 550px){
+            .box{
+                width: 90vw;
+            }
+        }
         @media screen and (max-width: 911px) and (min-width: 768px){
             #TL{
                 font-size: 5vw;
                 text-align: right;
+            }
+        }
+        @media screen and (max-width: 473px){
+            #TL{
+                font-size: 5vw;
             }
         }
         .namesleft{
@@ -194,14 +255,15 @@
         #sample-0-gototopbutton{
             position: fixed;
             bottom: 5vh;
-            right: 3vw;
+            right: 4vw;
             margin: auto;
-            width: 4vw;
+            width: 45px;
+            height: 45px;
             color: white;
-            padding: 7px 15px;
+            padding: 1px;
             background: rgba(15, 15, 15, 0.8);
-            box-shadow: 0 0 5px 0 #5d5d5d;
-            border-radius: 0.5vw;
+            box-shadow: 0 0 1px 0 #5d5d5d;
+            border-radius: 3px;
             cursor: pointer;
         }
 
@@ -266,8 +328,7 @@
     </header>
 
     <div class="body2">
-
-
+        
         <!--表紙-->
         <section class="face">
             <div>高校生徒会役員選挙2022</div>
@@ -281,28 +342,39 @@
     <div class="body2">
 
     <div id="sample-0-gototopbutton">
-        <a href="#top"><img src="assets/arrow.png"></a>
+        <a href="#"><img style="width: 40px; height: 40px;" src="assets/arrow.png"></a>
     </div>
         <!--News-->
         <section class="pad">
             <h1 style="font-weight: 600;">News</h1>
             <div class="box">
-                <p>
-                    2022.05.13
-                    <ul>
-                        <li>サイトをリリース</li>
-                        <li><a href="#saitoureo">齊藤伶央</a>のコメントを追加</li>
-                        <li><a href="#takehisa">武久裕哉</a>のコメントを追加</li>
-                        <li><a href="#shibuya">渋谷琴乃</a>のコメントを追加</li>
-                    </ul>
-                </p>
+                <p>2022.05.18</p>
+                <ul>
+                    <li>結果公示</li>
+                </ul>
+                <p>2022.05.17</p>
+                <ul>
+                    <li>立会演説会</li>
+                    <li>投票・開票</li>
+                </ul>
+                <p>2022.05.14</p>
+                <ul>
+                    <li>スマホに対応</li>
+                </ul>
+                <p>2022.05.13</p>
+                <ul>
+                    <li>サイトをリリース</li>
+                    <li><a href="#saitoureo">齊藤伶央</a>のコメントを追加</li>
+                    <li><a href="#takehisa">武久裕哉</a>のコメントを追加</li>
+                    <li><a href="#shibuya">渋谷琴乃</a>のコメントを追加</li>
+                </ul>
             </div>
         </section>
 
-        <div class="space" id="#top"></div>
+        <div class="space"></div>
 
-        <div class="row sort">
-            <h1 id="ichiran" style="font-size: 50px; font-weight: 800;">立候補者一覧</h1>
+        <div id="ichiran">
+            <h1 style="font-weight: 800;">立候補者一覧</h1>
             <p style="font-size: 30px;">(敬省略)</p>
         </div>
 
@@ -320,12 +392,12 @@
                 </div>
                 <div class="row">
                     <div id="col-sm-1" class="col-sm-1"></div>
-                    <div id="col-sm-4" class="col-sm-4"><img src="assets/oishi.jpg" /></div>
-                    <div id="col-sm-6" class="col-sm-6">
-                        <h1 class="namesright">大石 理翔</h1>
-                        <h3 class="hiraganaright">おおいし あやと</h3>
-                        <p class="movieright">動画なし</p>
-                        <p class="bun nocommentright">
+                    <div id="col-sm-4" class="col-sm-4"><img src="assets/oishi.jpg" /><div class="space2"></div></div>
+                    <div id="col-sm-6" class="col-sm-6 sort2">
+                        <h1 class="namesright item1">大石 理翔</h1>
+                        <h3 class="hiraganaright item2">おおいし あやと</h3>
+                        <p class="movieright item3">動画なし</p>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -347,12 +419,12 @@
                 <div class="row">
                     <div class="reverse">
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-4"><img src="assets/tianny.jpg" /></div>
-                        <div class="col-sm-6">
-                            <h1 class="namesleft " id="TL">ティアニー ルーク</h1>
-                            <h3 class="hiraganaleft">てぃあにー るーく</h3>
-                            <p class="movieleft">動画なし</p>
-                            <p class="bun nocommentleft">
+                        <div class="col-sm-4"><img src="assets/tianny.jpg" /><div class="space2"></div></div>
+                        <div class="col-sm-6 sort2">
+                            <h1 class="namesleft item1" id="TL">ティアニー ルーク</h1>
+                            <h3 class="hiraganaleft item2">てぃあにー るーく</h3>
+                            <p class="movieleft item3">動画なし</p>
+                            <p class="bun nocommentleft item4">
                                 (コメント未定)
                             </p>
                         </div>
@@ -374,12 +446,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/takao.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesright">高尾 志結</h1>
-                        <h3 class="hiraganaright">たかお しゆ</h3>
-                        <p class="movieright">動画なし</p>
-                        <p class="bun nocommentright">
+                    <div class="col-sm-4"><img src="assets/takao.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesright item1">高尾 志結</h1>
+                        <h3 class="hiraganaright item2">たかお しゆ</h3>
+                        <p class="movieright item3">動画なし</p>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -401,12 +473,12 @@
                 <div class="row">
                     <div class="reverse">
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-4"><img src="assets/saitoureo.jpg" /></div>
-                        <div class="col-sm-6">
-                            <h1 class="namesleft">齊藤 伶央</h1>
-                            <h3 class="hiraganaleft">さいとう れお</h3>
-                            <div class="movieleft"><iframe src="https://www.youtube.com/embed/UToegX08Bw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <p class="bun">
+                        <div class="col-sm-4"><img src="assets/saitoureo.jpg" /><div class="space2"></div></div>
+                        <div class="col-sm-6 sort2">
+                            <h1 class="namesleft item1">齊藤 伶央</h1>
+                            <h3 class="hiraganaleft item2">さいとう れお</h3>
+                            <div class="movieleft item3"><iframe src="https://www.youtube.com/embed/UToegX08Bw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            <p class="bun item4">
                                 皆さん、こんにちは。高校2年7組、会計立候補の齊藤伶央です。突然ですが、皆さんに質問があります。もし、皆さんが将来の為に何をすればいいのだろう？と問われたら何から始めるでしょうか？私だったら、何をすればいいか分からず、最初の一歩を踏み出すのに苦戦してしまうと思います。しかし、将来大人になったら何をしたいかは皆さんにとってはもう少し想像しやすいと思います。その目標、いわゆるゴールが明確になっていれば、そこから少しずつ逆算していけば、どのような仕事をしたいか、そしてその仕事に就くためにはどのような大学で何の学部に行く必要があるのかがわかると思います。そしたら、それに備えるために今、高校生活で何を勉強すればいいかが明確になると思います。このように、私は最初の一歩を明確にし、この学園に良い変化を起こしたいと思います。皆さんのために全力を尽くすのでよろしくお願いします。
                             </p>
                         </div>
@@ -418,12 +490,12 @@
 
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/nakamura.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesright">中村 仁美</h1>
-                        <h3 class="hiraganaright">なかむら ひとみ</h3>
-                        <div class="movieright"><iframe src="https://www.youtube.com/embed/mgqqlUdWLiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <p class="bun nocommentright">
+                    <div class="col-sm-4"><img src="assets/nakamura.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesright item1">中村 仁美</h1>
+                        <h3 class="hiraganaright item2">なかむら ひとみ</h3>
+                        <div class="movieright item3"><iframe src="https://www.youtube.com/embed/mgqqlUdWLiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -449,11 +521,11 @@
                     <div class="reverse">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-4"><img src="assets/mitani.jpg" /></div>
-                        <div class="col-sm-6">
-                            <h1 class="namesleft">三谷 颯</h1>
-                            <h3 class="hiraganaleft">みたに そう</h3>
-                            <div class="movieleft"><iframe src="https://www.youtube.com/embed/aHwl74drWp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <p class="bun nocommentleft">
+                        <div class="col-sm-6 sort2">
+                            <h1 class="namesleft item1">三谷 颯</h1>
+                            <h3 class="hiraganaleft item2">みたに そう</h3>
+                            <div class="movieleft item3"><iframe src="https://www.youtube.com/embed/aHwl74drWp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            <p class="bun nocommentleft item4">
                                 (コメント未定)
                             </p>
                         </div>
@@ -465,12 +537,12 @@
 
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/suzuki.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesright">鈴木 莉紗</h1>
-                        <h3 class="hiraganaright">すずき りさ</h3>
-                        <div class="movieright"><iframe src="https://www.youtube.com/embed/YpteYf70hwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <p class="bun nocommentright">
+                    <div class="col-sm-4"><img src="assets/suzuki.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesright item1">鈴木 莉紗</h1>
+                        <h3 class="hiraganaright item2">すずき りさ</h3>
+                        <div class="movieright item3"><iframe src="https://www.youtube.com/embed/YpteYf70hwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -482,12 +554,12 @@
                 <div class="row">
                     <div class="reverse">
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-4"><img src="assets/shibuya.jpg" /></div>
-                        <div class="col-sm-6">
-                            <h1 class="namesleft">渋谷 琴乃</h1>
-                            <h3 class="hiraganaleft">しぶや ことの</h3>
-                            <div class="movieleft"><iframe src="https://www.youtube.com/embed/qGdc3xMmpNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <p class="bun">
+                        <div class="col-sm-4"><img src="assets/shibuya.jpg" /><div class="space2"></div></div>
+                        <div class="col-sm-6 sort2">
+                            <h1 class="namesleft item1">渋谷 琴乃</h1>
+                            <h3 class="hiraganaleft item2">しぶや ことの</h3>
+                            <div class="movieleft item3"><iframe src="https://www.youtube.com/embed/qGdc3xMmpNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            <p class="bun item4">
                         　皆さんこんにちは。生徒会副会長に立候補いたしました高校1年8組の渋谷琴乃です。<br>
         　私が今回立候補したのは、昨年度行った制服の自由化運動やけやき祭での部活発表で生徒会がどれだけ学園に貢献しているか、またどれだけ重い責任を負っているのかを目にしてやってみたいと思ったのが大きな理由です。自身のリーダーシップやコミュニケーションへの意欲を活かしてより良い広尾学園の運営に関わって参りたいと思っています。<br>
         　公約は、生徒会のSNSアカウントを作ってそれぞれの役職が提示した公約の進捗状況を皆さんにお伝えすることと皆さんの時間を無駄にしないことを最大限優先した業務を徹底することです。<br>
@@ -513,12 +585,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/matsukura.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesright">松倉 友里恵</h1>
-                        <h3 class="hiraganaright">まつくら ゆりえ</h3>
-                        <div class="movieright"><iframe src="https://www.youtube.com/embed/O3tcipOp1xI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <p class="bun nocommentright">
+                    <div class="col-sm-4"><img src="assets/matsukura.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesright item1">松倉 友里恵</h1>
+                        <h3 class="hiraganaright item2">まつくら ゆりえ</h3>
+                        <div class="movieright item3"><iframe src="https://www.youtube.com/embed/O3tcipOp1xI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -530,12 +602,12 @@
                 <div class="row">
                     <div class="reverse">
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-4"><img src="assets/saitou.jpg" /></div>
-                        <div class="col-sm-6">
-                            <h1 class="namesleft">齋藤 智郎</h1>
-                            <h3 class="hiraganaleft">さいとう ともろう</h3>
-                            <p class="movieleft">動画なし</p>
-                            <p class="bun nocommentleft">
+                        <div class="col-sm-4"><img src="assets/saitou.jpg" /><div class="space2"></div></div>
+                        <div class="col-sm-6 sort2">
+                            <h1 class="namesleft item1">齋藤 智郎</h1>
+                            <h3 class="hiraganaleft item2">さいとう ともろう</h3>
+                            <p class="movieleft item3">動画なし</p>
+                            <p class="bun nocommentleft item4">
                                 (コメント未定)
                             </p>
                         </div>
@@ -547,12 +619,12 @@
 
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/ohtake.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesright">大竹 英莉</h1>
-                        <h3 class="hiraganaright">おおたけ はなり</h3>
-                        <p class="movieright">動画なし</p>
-                        <p class="bun nocommentright">
+                    <div class="col-sm-4"><img src="assets/ohtake.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesright item1">大竹 英莉</h1>
+                        <h3 class="hiraganaright item2">おおたけ はなり</h3>
+                        <p class="movieright item3">動画なし</p>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -575,12 +647,12 @@
                 <div class="row">
                     <div class="reverse">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/yamaguchi.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesleft">山口 真依</h1>
-                        <h3 class="hiraganaleft">やまぐち まい</h3>
-                        <div class="movieleft"><iframe src="https://www.youtube.com/embed/UEarHJziYgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <p class="bun nocommentleft">
+                    <div class="col-sm-4"><img src="assets/yamaguchi.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesleft  item1">山口 真依</h1>
+                        <h3 class="hiraganaleft item2">やまぐち まい</h3>
+                        <div class="movieleft item3"><iframe src="https://www.youtube.com/embed/UEarHJziYgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <p class="bun nocommentleft item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -592,12 +664,12 @@
 
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-4"><img src="assets/isii.jpg" /></div>
-                    <div class="col-sm-6">
-                        <h1 class="namesright">石井 優妃</h1>
-                        <h3 class="hiraganaright">いしい ゆき</h3>
-                        <div class="movieright"><iframe src="https://www.youtube.com/embed/1azeBf1rAOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <p class="bun nocommentright">
+                    <div class="col-sm-4"><img src="assets/isii.jpg" /><div class="space2"></div></div>
+                    <div class="col-sm-6 sort2">
+                        <h1 class="namesright item1">石井 優妃</h1>
+                        <h3 class="hiraganaright item2">いしい ゆき</h3>
+                        <div class="movieright item3"><iframe src="https://www.youtube.com/embed/1azeBf1rAOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <p class="bun nocommentright item4">
                             (コメント未定)
                         </p>
                     </div>
@@ -609,12 +681,12 @@
                 <div class="row">
                     <div class="reverse">
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-4"><img src="assets/takehisa.jpg" /></div>
-                        <div class="col-sm-6">
-                            <h1 class="namesleft">武久 裕哉</h1>
-                            <h3 class="hiraganaleft">たけひさ ゆうや</h3>
-                            <div class="movieleft"><iframe src="https://www.youtube.com/embed/Dv_JcZSou5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <p class="bun">
+                        <div class="col-sm-4"><img src="assets/takehisa.jpg" /><div class="space2"></div></div>
+                        <div class="col-sm-6 sort2">
+                            <h1 class="namesleft item1">武久 裕哉</h1>
+                            <h3 class="hiraganaleft item2">たけひさ ゆうや</h3>
+                            <div class="movieleft item3"><iframe src="https://www.youtube.com/embed/Dv_JcZSou5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            <p class="bun item4">
                                 こんにちは、会計候補高校1年8組の武久裕哉です。私は会計として選ばれた場合、みなさん全員に公平なチャンスを与えることを約束します。これは過去の会計の仕事（オーストラリアにいた頃の）についた経験からの推測ですが、会計が行う仕事とは、広尾学園の場合、各部活の資金やけやき祭の支出と収入の把握、課外活動などに取り組む生徒の支援などです。コロナウィルスに対する制限も減ってきた中、部活では公式大会の参加や練習が増え、課外活動の活発化、さらには外部の方々を受け入れ、広尾学園の素晴らしさを紹介する欅祭も制限なしで行える可能性が高いです。そんな中、みなさんが不自由なく様々なことに取り組める環境を作るのが私の義務だと考えています。全生徒の利益と広尾学園の成長のため、みなさんの清き一票をいただけるとありがたいです。よろしくお願いします！
                             </p>
                         </div>
